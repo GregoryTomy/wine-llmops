@@ -19,6 +19,7 @@ transformers = "^4.39.3"
 py-itree = "^0.0.19"
 itree = "^0.0.5"
 ipykernel = "^6.29.4"
+black = "^24.3.0"
 
 
 [build-system]

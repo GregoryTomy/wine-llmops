@@ -21,18 +21,10 @@ print(os.getenv('SEARCH_SERVICE_NAME'))
 
 embeddings = OpenAIEmbeddings()
 
-# # LLama embeddings test
-# test_string = ["This is a test document.",
-#                "To check the dimensions.",
-#                "Should be 3x 4096"]
-# test_string_embedding = embeddings_llama.embed_documents(test_string)
-
-# print(len(test_string_embedding), len(test_string_embedding[0]), len(test_string_embedding[2]))
-
 # Connect and load to Azure Cognitive Search
 azure_cog_search = AzureSearch(azure_search_endpoint=os.getenv('SEARCH_SERVICE_NAME'),
                                azure_search_key=os.getenv('SEARCH_API_KEY'),
                                index_name=os.getenv('SEARCH_INDEX_NAME'),
                                embedding_function=embeddings.embed_query)
 
-# azure_cog_search.add_documents(documents=split_docs)
+azure_cog_search.add_documents(documents=split_docs)

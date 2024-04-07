@@ -1,4 +1,3 @@
-#! Update Index
 import os
 
 from azure.core.credentials import AzureKeyCredential
@@ -17,43 +16,28 @@ from azure.search.documents.indexes.models import (SimpleField,
 
 service_endpoint = os.getenv('SEARCH_SERVICE_NAME')
 service_key = os.getenv('SEARCH_API_KEY')
-
-
-print("Service Endpoint:", service_endpoint)
-print("Service API Key:", service_key)
-
 # instantiate client
 client = SearchIndexClient(service_endpoint,
                            AzureKeyCredential(service_key))
 
-
-# # Test connection by listing all indexes
-# try:
-#     index_names = [index.name for index in client.list_indexes()]
-#     print("Successfully connected to Azure Cognitive Search service.")
-#     print("Found the following indexes:", index_names)
-# except Exception as e:
-#     print("Failed to connect or list indexes:")
-#     print(e)
-
 def create_index():
     name= "wine-index"
 
-    # # Check if the index already exists
-    # existing_indexes = [index.name for index in client.list_indexes()]
-    # if name in existing_indexes:
-    #     # Delete the existing index
-    #     client.delete_index(name)
-    #     print(f"Existing index '{name}' deleted successfully.")
+    # Check if the index already exists
+    existing_indexes = [index.name for index in client.list_indexes()]
+    if name in existing_indexes:
+        # Delete the existing index
+        client.delete_index(name)
+        print(f"Existing index '{name}' deleted successfully.")
 
     fields = [
         SimpleField(name="id", type=SearchFieldDataType.String, key=True),
-        SearchableField(name="name", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        SearchableField(name="grape", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        SearchableField(name="region", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        SearchableField(name="variety", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        SearchableField(name="rating", type=SearchFieldDataType.Double, searchable=True, retrievable=True),
-        SearchableField(name="notes", type=SearchFieldDataType.String, searchable=True, retrievable=True),
+        # SearchableField(name="name", type=SearchFieldDataType.String, searchable=True, retrievable=True),
+        # SearchableField(name="grape", type=SearchFieldDataType.String, searchable=True, retrievable=True),
+        # SearchableField(name="region", type=SearchFieldDataType.String, searchable=True, retrievable=True),
+        # SearchableField(name="variety", type=SearchFieldDataType.String, searchable=True, retrievable=True),
+        # SearchableField(name="rating", type=SearchFieldDataType.Double, searchable=True, retrievable=True),
+        # SearchableField(name="notes", type=SearchFieldDataType.String, searchable=True, retrievable=True),
         SearchableField(name="content", type=SearchFieldDataType.String, searchable=True, retrievable=True),
         SearchableField(name="metadata", type=SearchFieldDataType.String, searchable=True, retrievable=True),
         SearchField(name="content_vector",
