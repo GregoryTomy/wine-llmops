@@ -8,7 +8,7 @@ from langchain_community.vectorstores.azuresearch import AzureSearch
 load_dotenv(".env")
 
 
-embeddings = OpenAIEmbeddings()
+embeddings = OpenAIEmbeddings(api_key=os.getenv("OPENAI_API_KEY"))
 
 azure_cog_search = AzureSearch(
     azure_search_endpoint=os.getenv("SEARCH_SERVICE_NAME"),

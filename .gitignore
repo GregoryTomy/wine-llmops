@@ -4,3 +4,5 @@ llama.cpp/
 *.ipynb
 wine-ratings_100.csv
 archive/
+env/
+.idea/

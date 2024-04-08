@@ -27,4 +27,5 @@ azure_cog_search = AzureSearch(azure_search_endpoint=os.getenv('SEARCH_SERVICE_N
                                index_name=os.getenv('SEARCH_INDEX_NAME'),
                                embedding_function=embeddings.embed_query)
 
+#* Note this will take a while (84 minutes for me)
 azure_cog_search.add_documents(documents=split_docs)

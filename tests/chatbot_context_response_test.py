@@ -3,10 +3,8 @@ import logging
 from openai import AzureOpenAI
 from pprint import pprint
 from dotenv import load_dotenv
-from langchain_openai import OpenAIEmbeddings, AzureChatOpenAI
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores.azuresearch import AzureSearch
-from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
-
 
 load_dotenv(".env")
 
@@ -36,7 +34,7 @@ messages = [
     },
     {
         "role": "user",
-        "content": "What is the best Cabernet Sauvignon wine from Nappa Valley above 90 rating points?",
+        "content": "What is a good Cabernet Sauvignon wine from Nappa Valley above 90 rating points?",
     },
     {"role": "assistant", "content": docs[0][0].page_content},
 ]
