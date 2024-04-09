@@ -7,10 +7,6 @@ from langchain_community.vectorstores.azuresearch import AzureSearch
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-load_dotenv(".env")
-
-app = FastAPI()
-
 ################################################################
 # Environment variables
 ################################################################
