@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+openai
+langchain-openai
+langchain-community
+python-dotenv
+azure-identity==1.15.0
+azure-search-documents==11.4.0

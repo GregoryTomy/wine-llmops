@@ -5,7 +5,6 @@ from fastapi.responses import RedirectResponse
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores.azuresearch import AzureSearch
 from pydantic import BaseModel
-from dotenv import load_dotenv
 
 ################################################################
 # Environment variables
