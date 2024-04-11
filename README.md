@@ -11,3 +11,4 @@ App:
 - access gate the chatbot to prevent misuse.
 - improve app UI.
 - add session memory for LLM.
+- add env file to secrets for web deployment.
