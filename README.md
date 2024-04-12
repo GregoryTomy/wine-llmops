@@ -12,3 +12,5 @@ App:
 - improve app UI.
 - add session memory for LLM.
 - add env file to secrets for web deployment.
+
+
