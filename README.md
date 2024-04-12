@@ -4,11 +4,12 @@
 ## To do:
 
 Deployment:
-- complete move to docker compose.
+- ~~complete move to docker compose.~~
 - host using Microsoft Azure App services.
+- use GitHub Actions for CI/CD
 
 App:
-- access gate the chatbot to prevent misuse.
+- ~~access gate the chatbot to prevent misuse~~.
 - improve app UI.
 - add session memory for LLM.
 - add env file to secrets for web deployment.
