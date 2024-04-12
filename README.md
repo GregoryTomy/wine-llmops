@@ -1,6 +1,8 @@
 # LLMOps with Microsoft Azure - Sommellier Chatbot
-> Developing a sommelier chatbot that helps you find the wine for your taste using Microsoft Azure, LangChain, and Retrieval-Agumented Generation (RAG). The app is powered by FastAPI and Streamlit. Special thanks to [Ivan Portilla](https://github.com/iportilla) for providing me access to Azure OpenAI and his excellent Applied Deep Learning course at the University of Colorado, Boulder.
 
+![](images/banner_image.webp)
+
+> Developing a sommelier chatbot that helps you find the wine for your taste using Microsoft Azure, LangChain, and Retrieval-Agumented Generation (RAG). The app is powered by FastAPI and Streamlit. Special thanks to [Ivan Portilla](https://github.com/iportilla) for providing me access to Azure OpenAI and his excellent Applied Deep Learning course at the University of Colorado, Boulder.
 ## To do:
 
 Deployment:
