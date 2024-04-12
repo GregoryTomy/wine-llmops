@@ -64,7 +64,7 @@ jobs:
         with:
           context: ./streamlit_frontend
           push: true
-          tags: ghcr.io/${{ env.FRONTEND_IMAGE_NAME }}:latest
+          tags: ghcr.io/GregoryTomy/${{ env.FRONTEND_IMAGE_NAME }}:latest
           file: ./streamlit_frontend/Dockerfile
 
       - name: Build and push backend image
@@ -72,7 +72,7 @@ jobs:
         with:
           context: ./fastapi_backend
           push: true
-          tags: ghcr.io/${{ env.BACKEND_IMAGE_NAME }}:latest
+          tags: ghcr.io/GregoryTomy/${{ env.BACKEND_IMAGE_NAME }}:latest
           file: ./fastapi_backend/Dockerfile
 
   deploy:
