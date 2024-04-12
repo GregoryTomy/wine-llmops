@@ -64,7 +64,7 @@ jobs:
         with:
           context: ./streamlit_frontend
           push: true
-          tags: ghcr.io/gregorytomy/${{ env.FRONTEND_IMAGE_NAME }}:latest
+          tags: ghcr.io/${{ env.REPO }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ github.sha }}
           file: ./streamlit_frontend/Dockerfile
 
       - name: Build and push backend image
@@ -72,7 +72,7 @@ jobs:
         with:
           context: ./fastapi_backend
           push: true
-          tags: ghcr.io/gregorytomy/${{ env.BACKEND_IMAGE_NAME }}:latest
+          tags: ghcr.io/${{ env.REPO }}/${{ env.BACKEND_IMAGE_NAME }}:${{ github.sha }}
           file: ./fastapi_backend/Dockerfile
 
   deploy:
