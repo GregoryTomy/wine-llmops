@@ -1,0 +1,32 @@
+services:
+  frontend:
+    image: ghcr.io/wine_llmops-frontend:latest
+    # build: streamlit_frontend
+    ports:
+      - 8501:8501
+    depends_on:
+      - backend
+    volumes:
+      - ./streamlit_frontend:/app
+    restart: always
+    networks:
+      - app
+    container_name: streamlit_frontend
+
+  backend:
+    image: ghcr.io/wine_llmops-backend:latest
+    build: fastapi_backend
+    ports:
+      - 8000:8000
+    volumes:
+      - ./fastapi_backend:/app
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - app
+    container_name: backenfastapi_backend
+
+networks:
+  app:
+    driver: bridge
