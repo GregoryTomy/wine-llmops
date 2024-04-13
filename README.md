@@ -8,7 +8,7 @@
 Deployment:
 - ~~complete move to docker compose.~~
 - ~~host using Microsoft Azure App services~~.
-- use GitHub Actions for CI/CD
+- ~~use GitHub Actions for CI/CD~~ (did not work )
 
 App:
 - ~~access gate the chatbot to prevent misuse~~.

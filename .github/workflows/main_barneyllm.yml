@@ -32,7 +32,7 @@ jobs:
       with:
         context: ./fastapi_backend
         push: true
-        tags: winellmops.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32040161a0c044979997b69bbf8732ac }}/wine_llmops-backend:${{ github.sha }}
+        tags: winellmops.azurecr.io/wine_llmops-backend:${{ github.sha }}
         
     # Build and push frontend image to registry
     - name: Build and push frontend container image to registry
@@ -40,7 +40,7 @@ jobs:
       with:
         context: ./streamlit_frontend
         push: true
-        tags: winellmops.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32040161a0c044979997b69bbf8732ac }}/wine_llmops-frontend:${{ github.sha }}
+        tags: winellmops.azurecr.io/wine_llmops-frontend:${{ github.sha }}
    
   deploy-backend:
     runs-on: ubuntu-latest
@@ -55,7 +55,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'barneyllm'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        # publish-profile: ${{ secrets.AzureAppService_PublishProfile_bddc38c58bfa48cdad98df445e697d67 }}
-        configuration-file: ./docker-compose-az.yml
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bddc38c58bfa48cdad98df445e697d67 }}
+        multi-container-config-file: ./docker-compose-az.yml
