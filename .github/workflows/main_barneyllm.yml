@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy container app to Azure Web App - barneyllm
+name: Build and deploy app to Azure Web App - barneyllm
 
 on:
   push:
@@ -26,14 +26,23 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_32040161a0c044979997b69bbf8732ac }}
         password: ${{ secrets.AzureAppService_ContainerPassword_3246ec155a8446508e678ae2850e8556 }}
 
-    - name: Build and push container image to registry
+    # Build and push backend image to registry
+    - name: Build and push backend container image to registry
       uses: docker/build-push-action@v3
       with:
+        context: ./fastapi_backend
         push: true
         tags: winellmops.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32040161a0c044979997b69bbf8732ac }}/wine_llmops-backend:${{ github.sha }}
-        file: ./Dockerfile
-
-  deploy:
+        
+    # Build and push frontend image to registry
+    - name: Build and push frontend container image to registry
+      uses: docker/build-push-action@v3
+      with:
+        context: ./streamlit_frontend
+        push: true
+        tags: winellmops.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32040161a0c044979997b69bbf8732ac }}/wine_llmops-frontend:${{ github.sha }}
+   
+  deploy-backend:
     runs-on: ubuntu-latest
     needs: build
     environment:
@@ -48,4 +57,4 @@ jobs:
         app-name: 'barneyllm'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_bddc38c58bfa48cdad98df445e697d67 }}
-        images: 'winellmops.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32040161a0c044979997b69bbf8732ac }}/wine_llmops-backend:${{ github.sha }}'
+        configuration-file: ./docker-compose.yml
