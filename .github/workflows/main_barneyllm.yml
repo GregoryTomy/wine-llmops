@@ -56,5 +56,6 @@ jobs:
       with:
         app-name: 'barneyllm'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bddc38c58bfa48cdad98df445e697d67 }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }
+        # publish-profile: ${{ secrets.AzureAppService_PublishProfile_bddc38c58bfa48cdad98df445e697d67 }}
         configuration-file: ./docker-compose-az.yml
