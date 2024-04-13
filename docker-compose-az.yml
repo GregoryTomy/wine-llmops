@@ -1,25 +1,25 @@
 services:
   frontend:
-    image: ghcr.io/GregoryTomy/wine_llmops-frontend:latest
+    image: winellmops.azurecr.io/wine_llmops-frontend:latest
     # build: streamlit_frontend
     ports:
       - 8501:8501
     depends_on:
       - backend
     volumes:
-      - ./streamlit_frontend:/app
+      - ${WEBAPP_STORAGE_HOME}/streamlit_frontend
     restart: always
     networks:
       - app
     container_name: streamlit_frontend
 
   backend:
-    image: ghcr.io/GregoryTomy/wine_llmops-backend:latest
+    image: winellmops.azurecr.io/wine_llmops-backend:latest
     build: fastapi_backend
     ports:
       - 8000:8000
     volumes:
-      - ./fastapi_backend:/app
+      - ${WEBAPP_STORAGE_HOME}/fastapi_backend
     restart: always
     env_file:
       - .env
