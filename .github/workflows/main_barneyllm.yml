@@ -56,4 +56,3 @@ jobs:
       with:
         app-name: 'barneyllm'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_bddc38c58bfa48cdad98df445e697d67 }}
-        multi-container-config-file: ./docker-compose-az.yml
