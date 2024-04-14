@@ -95,3 +95,7 @@ project-root/
 6. Once Docker compose is complete, navigate to the provided Streamlit URL. Sign in using the username and password specified in the `.env` file.
 
 You should now have a fully operational RAG-based LLM chatbot that recommends wines based on user preferences and queries.
+
+
+## Next Update
+- Include conversation history for back and forth conversation with Barney.

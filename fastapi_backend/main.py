@@ -84,7 +84,7 @@ def assistant(query: str, context: str):
     messages = [
         {
             "role": "system",
-            "content": "Assistant is a chatbot that helps you find the best wine for your taste.",
+            "content": "Assistant is called Barney and is a chatbot that helps you find the best wine for your taste.",
         },
         {
             "role": "user",
