@@ -5,13 +5,23 @@
 ## Introduction:
 Developed a sommelier chatbot that helps you find the wine for your taste using Microsoft Azure, LangChain, and Retrieval-Agumented Generation (RAG). The app is powered by FastAPI and Streamlit. Special thanks to [Ivan Portilla](https://github.com/iportilla) for providing me access to Azure OpenAI and his excellent Applied Deep Learning course at the University of Colorado, Boulder.
 
+
+> The chatbot can be accessed at https://barneyllm.azurewebsites.net/
+
 ## Main Technologies:
-- Microsoft Azure & Azure OpenAI
-- LangChain
-- FastAPI
-- Streamlit
-- Docker
-- GitHub Actions
+- ### Microsoft Azure & Azure OpenAI
+    Azure services were used to host and manage the app's backend and data storage. OpenAI models - text-embedding-ada-002 and gpt-3.5-turbo - were used for embeddings and chat bot respectively.
+
+- ### LangChain
+    LangChain was employed to manage the interaction between the chatbot's language model and its backend logic, ensuring smooth communication and data retrieval processes that underpin the chatbot's conversational abilities.
+- ### FastAPI
+    FastAPI was used to build the backend of the application, providing robust API routes that handle requests efficiently and manage the interaction between the frontend, the AI models, and the database.
+- ### Streamlit
+    Streamlit was chosen to develop the user interface of the chatbot. It powers the frontend, presenting users with an interactive and user-friendly interface to input their wine preferences and receive recommendations.
+- ### Docker
+    Docker was used to containerize the entire application, ensuring that it runs consistently across different computing environments. The use of Docker also simplifies the deployment and scaling of the application.
+- ### GitHub Actions
+    GitHub Actions was implemented for continuous integration and continuous deployment (CI/CD) of the chatbot application. This setup automates tests and deployments, ensuring that updates to the codebase are smoothly integrated and deployed to production environments without disruption
 
 ![](images/end-to-end.png)
 
@@ -71,11 +81,11 @@ project-root/
     AZURE_OPENAI_EMBEDDING_MODEL_NAME=
 
     # Streamlit App authenticator
-    CREDENTIALS_USERNAME=hsimpson
-    CREDENTIALS_PASSWORD=duffbeer
-    CREDENTIALS_NAMES=test_user
-    COOKIE_NAME=some_cookie_name
-    COOKIE_KEY=TilkjP18HT6GzsPIe8lsYf83FCYpIMvoIcOmkKv3GIk
+    CREDENTIALS_USERNAME=
+    CREDENTIALS_PASSWORD=
+    CREDENTIALS_NAMES=
+    COOKIE_NAME=
+    COOKIE_KEY=
     COOKIE_EXPIRY_DAYS=5
 
     ```
