@@ -32,7 +32,7 @@ jobs:
       with:
         context: ./fastapi_backend
         push: true
-        tags: winellmops.azurecr.io/wine_llmops-backend:${{ github.sha }}
+        tags: winellmops.azurecr.io/wine_llmops-backend:latest
         
     # Build and push frontend image to registry
     - name: Build and push frontend container image to registry
@@ -40,7 +40,7 @@ jobs:
       with:
         context: ./streamlit_frontend
         push: true
-        tags: winellmops.azurecr.io/wine_llmops-frontend:${{ github.sha }}
+        tags: winellmops.azurecr.io/wine_llmops-frontend:latest
    
   deploy-backend:
     runs-on: ubuntu-latest
