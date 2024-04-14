@@ -32,12 +32,6 @@ def create_index():
 
     fields = [
         SimpleField(name="id", type=SearchFieldDataType.String, key=True),
-        # SearchableField(name="name", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        # SearchableField(name="grape", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        # SearchableField(name="region", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        # SearchableField(name="variety", type=SearchFieldDataType.String, searchable=True, retrievable=True),
-        # SearchableField(name="rating", type=SearchFieldDataType.Double, searchable=True, retrievable=True),
-        # SearchableField(name="notes", type=SearchFieldDataType.String, searchable=True, retrievable=True),
         SearchableField(name="content", type=SearchFieldDataType.String, searchable=True, retrievable=True),
         SearchableField(name="metadata", type=SearchFieldDataType.String, searchable=True, retrievable=True),
         SearchField(name="content_vector",
