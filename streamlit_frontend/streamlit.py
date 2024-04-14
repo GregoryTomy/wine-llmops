@@ -39,7 +39,7 @@ def authenticate_user(authenticator):
             authenticator.login()
 
         with st.container():
-            st.image("../images/banner_image.webp")
+            st.image("banner_image.webp")
             st.title("Welcome to Barney - your personal sommelier")
             st.subheader("Please log in to access Barney.")
 
