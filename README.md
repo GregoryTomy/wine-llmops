@@ -90,18 +90,10 @@ project-root/
     AZURE_OPENAI_EMBEDDING_DEPLOYMENT=
     AZURE_OPENAI_EMBEDDING_MODEL_NAME=
 
-    # Streamlit App authenticator
-    CREDENTIALS_USERNAME=
-    CREDENTIALS_PASSWORD=
-    CREDENTIALS_NAMES=
-    COOKIE_NAME=
-    COOKIE_KEY=
-    COOKIE_EXPIRY_DAYS=5
-
     ```
 3. Run `create_index.py` to set up an Azure AI search index. This index will store and retrieve the wine embeddings.
 4. Run `embeddings.py` to generate text embeddings using the `text-embeddings-ada-002` model from OpenAI and to upload it to Azure AI search. Adjust the embedding function as necessary if using Azure OpenAI. Generating embeddings can be time-consuming; it took 84 minutes in this project.
 5. Deploy the application using `docker-compose.yml`. Be sure to prove the `.env` file as an argument to configure the environment properly. 
-6. Once Docker compose is complete, navigate to the provided Streamlit URL. Sign in using the username and password specified in the `.env` file.
+6. Once Docker compose is complete, navigate to the provided Streamlit URL.
 
 You should now have a fully operational RAG-based LLM chatbot that recommends wines based on user preferences and queries.
