@@ -75,8 +75,8 @@ def main_app():
         # display assistant response in chat message containter
         with st.chat_message("assistant"):
             # send input to FastAPI endpoint
-            url = "http://backend:8000/ask"
-            # url = "http://0.0.0.0:8000/ask"
+            # url = "http://backend:8000/ask"
+            url = "http://0.0.0.0:8000/ask"
             response = requests.post(url, json={"query": user_input})
 
             if response.status_code == 200:

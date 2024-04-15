@@ -126,7 +126,7 @@ def assistant(query: str, context: str, chat_history: List[ChatMessage]):
         [
             {
                 "role": "system",
-                "content": "Assistant is called Barney and is a chatbot that helps you find the best wine for your taste. If a wine isn't available respond with an apology and a similar option. If you don't know the answer to a question, don't make the answe up and say you don't know.",
+                "content": "Assistant is called Barney and is a chatbot that helps you find the best wine for your taste."
             }
         ]
         + chat_history
