@@ -2,12 +2,20 @@
 
 ![](images/banner_image.webp)
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Demo](#demo)
+- [Main Technologies](#main-technologies)
+- [What is Retrieval-Augmented Generation](#what-is-retrieval-augmented-generation-rag)
+- [Local Deployment](#local-deployment-guide)
+
 ## Introduction:
 Developed a sommelier chatbot that helps you find the wine for your taste using Microsoft Azure, LangChain, and Retrieval-Agumented Generation (RAG). The app is powered by FastAPI and Streamlit. Special thanks to [Ivan Portilla](https://github.com/iportilla) for providing me access to Azure OpenAI and his excellent Applied Deep Learning course at the University of Colorado, Boulder.
 
 
 > The chatbot can be accessed at https://barneyllm.azurewebsites.net/
 
+> Please note that currently the app is behind a login screen as the Azure search service is expensive. Kindly reach out to get access if you are interested in trying it out. *Currently working on a demo version*.
 ### Demo:
 ![](images/barney_demo.gif)
 
