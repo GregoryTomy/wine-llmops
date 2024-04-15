@@ -8,6 +8,9 @@ Developed a sommelier chatbot that helps you find the wine for your taste using 
 
 > The chatbot can be accessed at https://barneyllm.azurewebsites.net/
 
+### Demo:
+![](images/barney_demo.gif)
+
 ## Main Technologies:
 - ### Microsoft Azure & Azure OpenAI
     Azure services were used to host and manage the app's backend and data storage. OpenAI models - text-embedding-ada-002 and gpt-3.5-turbo - were used for embeddings and chat bot respectively.
