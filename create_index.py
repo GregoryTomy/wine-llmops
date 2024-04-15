@@ -1,5 +1,5 @@
 import os
-
+from dotenv import load_dotenv
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents.indexes import SearchIndexClient
 from azure.search.documents.indexes.models import (SimpleField,
@@ -13,6 +13,8 @@ from azure.search.documents.indexes.models import (SimpleField,
                                                    VectorSearchAlgorithmKind,
                                                    VectorSearchAlgorithmMetric,
                                                    VectorSearchProfile)
+
+# load_dotenv('.env')
 
 service_endpoint = os.getenv('SEARCH_SERVICE_NAME')
 service_key = os.getenv('SEARCH_API_KEY')

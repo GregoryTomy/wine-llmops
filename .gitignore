@@ -2,7 +2,7 @@
 llama/
 llama.cpp/
 *.ipynb
-wine-ratings_100.csv
+wine-ratings_2000.csv
 archive/
 env/
 .idea/

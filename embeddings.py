@@ -8,7 +8,7 @@ from langchain_text_splitters import CharacterTextSplitter
 
 load_dotenv('.env')
 
-loader = CSVLoader("wine-ratings_100.csv")
+loader = CSVLoader("wine-ratings.csv")
 documents = loader.load()
 
 
