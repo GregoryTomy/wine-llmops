@@ -12,10 +12,12 @@
 ## Introduction:
 Developed a sommelier chatbot that helps you find the wine for your taste using Microsoft Azure, LangChain, and Retrieval-Agumented Generation (RAG). The app is powered by FastAPI and Streamlit. Special thanks to [Ivan Portilla](https://github.com/iportilla) for providing me access to Azure OpenAI and his excellent Applied Deep Learning course at the University of Colorado, Boulder.
 
+![](images/end-to-end.png)
 
-> The demo can be accessed at https://barneyllm.azurewebsites.net/
 
 ### Demo:
+> The demo can be accessed at https://barneyllm.azurewebsites.net/
+
 ![](images/barney_demo.gif)
 
 ## Main Technologies:
@@ -33,7 +35,7 @@ Developed a sommelier chatbot that helps you find the wine for your taste using 
 - ### GitHub Actions
     GitHub Actions was implemented for continuous integration and continuous deployment (CI/CD) of the chatbot application. This setup automates tests and deployments, ensuring that updates to the codebase are smoothly integrated and deployed to production environments without disruption
 
-![](images/end-to-end.png)
+
 
 ## What is Retrieval-Augmented Generation (RAG)?
 Retrieval-Augmented Generation (RAG) is a hybrid AI technique that combines the strengths of generative and retrieval-based models. It dynamically pulls relevant data from external sources to inform and refine the content generation process, producing outputs that are not only contextually accurate but also rich in detail.
